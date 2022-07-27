@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PriceBeta | Signup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="con">
+            <h3>Create a Secure PriceBeta Account</h3>
+            <p>Welcome to the Number 1 Price Comparison Website!</p>
+            <p>Enter your details to get started<p>
+        </div>
+        <div class="form">
+
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <label for="fname" class="regLabel">User Name</label><br> 
+                 <input type="text" id="fname" name='username' placeholder="User Name" class="regInput"><br>
+
+                 <label for="fname" class="regLabel">First Name</label><br> 
+                 <input type="text" id="fname" name='first_name' placeholder="First Name" class="regInput"><br>
+
+                 <label for="last_name" class="regLabel">Last Name</label><br> 
+                 <input type="text" id="last_name" name='last_name' placeholder="Last Name" class="regInput"><br>
+
+                 <label for="email" class="regLabel">Email Address</label><br> 
+                 <input type="email" id="email" name='email' placeholder="Email Address" class="regInput"><br>
+
+                 <label for="password" class="regLabel">Password</label><br> 
+                 <input type="password" id="password" name='password' placeholder="Password" class="regInput"><br>
+                 
+                 <label for="password2" class="regLabel">Confirm Password</label><br> 
+                 <input type="password" id="password2" name='password2' placeholder="Password" class="regInput"><br>
+                <button type="submit">CREATE ACCOUNT</button>
+            </form>
+        </div>
+    </div>
+<footer>
+    <a href="{% url 'signin' %}">Already have an account? Login </a>
+</footer>
+</body>
+</html>
